@@ -1,0 +1,13 @@
+[Unit]
+Description=Indi Web Manager service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=stephen
+ExecStart=/home/stephen/.local/bin/indi-web
+
+[Install]
+WantedBy=multi-user.target
